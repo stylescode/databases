@@ -22,8 +22,6 @@ describe('Persistent Node Chat Server', () => {
      * (or repeated runs of the tests)  will not fail when they should be passing
      * or vice versa */
     dbConnection.query(`truncate messages`, done);
-    dbConnection.query(`truncate rooms`, done);
-    dbConnection.query(`truncate users`, done);
   }, 6500);
 
   afterAll(() => {

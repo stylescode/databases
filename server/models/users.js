@@ -1,6 +1,15 @@
-var db = require('../db');
+var { dbConnection } = require('../db');
 
 module.exports = {
-  getAll: function () {},
+  getAll: (callback) => {
+    dbConnection.query('SELECT DISTINCT created_by FROM messages', (err, result) => {
+      if (err) {
+        callback(err);
+      } else {
+        callback(null, result);
+      }
+    });
+  },
+
   create: function () {}
 };

@@ -8,7 +8,7 @@ exports.dbConnection = mysql.createConnection({
 });
 // Confirm that the credentials supplied for the connection are correct.
 
-dbConnection.connect();
+exports.dbConnection.connect();
 
 
 // On your personal computer supply the correct credentials for your mySQL account -- likely
